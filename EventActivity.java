@@ -13,9 +13,7 @@ import com.example.appqr.viewModels.EventViewModel;
 
 public class EventActivity extends AppCompatActivity {
 
-    EventViewModel viewModel;
-    RecyclerView rcCategory;
-
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +25,6 @@ public class EventActivity extends AppCompatActivity {
     }
 
    
-
     private void initData() {
         int idcate = getIntent().getIntExtra("idcate", 1);
         viewModel = new ViewModelProvider(this).get(EventViewModel.class);
