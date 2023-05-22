@@ -23,7 +23,10 @@ public class EventActivity extends AppCompatActivity {
         initView();
         initData();
     }
-
+private void initData() {
+        int idcate = getIntent().getIntExtra("idcate", 1);
+        viewModel = new ViewModelProvider(this).get(EventViewModel.class);
+        viewModel.skModelsMutableLiveData(idcate).observe(this, skModels -> {
    
     private void initData() {
         int idcate = getIntent().getIntExtra("idcate", 1);
