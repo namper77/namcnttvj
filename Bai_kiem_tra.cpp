@@ -21,13 +21,7 @@ class tu_giac: public toa_do_2d {
 private:
     toa_do_2d dinh_a, dinh_b, dinh_c, dinh_d;
 
-public:
-    tu_giac(toa_do_2d dinh_a , toa_do_2d dinh_b , toa_do_2d dinh_c , toa_do_2d dinh_d): toa_do_2d(x,y) {
-        this->dinh_a = dinh_a;
-        this->dinh_b = dinh_b;
-        this->dinh_c = dinh_c;
-        this->dinh_d = dinh_d;
-    }
+
     double getArea() {
         double AB = dinh_a.tinh_do_dai(dinh_b);
         double BC = dinh_b.tinh_do_dai(dinh_c);
@@ -53,19 +47,6 @@ public:
         }
         return false;
     }
-    bool isSquare() {
-        double AB = dinh_a.tinh_do_dai(dinh_b);
-        double BC = dinh_b.tinh_do_dai(dinh_c);
-        double CD = dinh_c.tinh_do_dai(dinh_d);
-        double DA = dinh_d.tinh_do_dai(dinh_a);
-        double AC = dinh_a.tinh_do_dai(dinh_c);
-        double BD = dinh_b.tinh_do_dai(dinh_d);
-        if (AB == BC && BC == CD && CD == DA && DA == AB && AC == BD) {
-            return true;
-        }
-        return false;
-    }
-};
 
 int main() {
     toa_do_2d A(0, 3);
