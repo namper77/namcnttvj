@@ -20,7 +20,19 @@ public:
 class tu_giac: public toa_do_2d {
 private:
     toa_do_2d dinh_a, dinh_b, dinh_c, dinh_d;
-
+ double getArea() {
+        double AB = dinh_a.tinh_do_dai(dinh_b);
+        double BC = dinh_b.tinh_do_dai(dinh_c);
+@@ -53,19 +47,6 @@ class tu_giac: public toa_do_2d {
+        }
+        return false;
+    } double getArea() {
+        double AB = dinh_a.tinh_do_dai(dinh_b);
+        double BC = dinh_b.tinh_do_dai(dinh_c);
+@@ -53,19 +47,6 @@ class tu_giac: public toa_do_2d {
+        }
+        return false;
+    }
 
     double getArea() {
         double AB = dinh_a.tinh_do_dai(dinh_b);
