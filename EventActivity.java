@@ -26,19 +26,13 @@ public class EventActivity extends AppCompatActivity {
         initData();
     }
 
-    private void initView() {
-        rcCategory.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
-        rcCategory.setLayoutManager(layoutManager);
-    }
+   
 
     private void initData() {
         int idcate = getIntent().getIntExtra("idcate", 1);
         viewModel = new ViewModelProvider(this).get(EventViewModel.class);
         viewModel.skModelsMutableLiveData(idcate).observe(this, skModels -> {
-            if (skModels.isSuccess()) {
-                SkAdapter adapter = new SkAdapter(skModels.getResult());
-                rcCategory.setAdapter(adapter);
+            
             }
         });
     }
